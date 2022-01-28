@@ -1,6 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Banner from '../components/Banner';
+import BlogTypes from '../components/BlogTypes';
+import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import PubTypes from '../components/PubTypes';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +17,15 @@ const Home: NextPage = () => {
       <nav>
         <Nav />
       </nav>
-      <main></main>
+      <main>
+        <Banner />
+        <BlogTypes />
+        <PubTypes />
+      </main>
 
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
