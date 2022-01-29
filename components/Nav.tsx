@@ -1,18 +1,10 @@
 import { Fragment } from 'react';
 import Image from 'next/image';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import config from '../config';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+const buttons = config.navBar.buttons;
 
 export default function Nav() {
   return (
@@ -32,32 +24,29 @@ export default function Nav() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex-shrink-0 flex items-center">
                   <div className="h-8 w-32">
                     <Image
-                      src="/win-of-1720-2.jpg"
+                      className="object-contain"
+                      src={config.navBar.logo.url}
                       width={128}
                       height={32}
-                      alt="Workflow"
+                      alt={config.navBar.logo.alt}
                     />
                   </div>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {buttons.map((item) => (
                       <a
-                        key={item.name}
+                        key={item.text}
                         href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                        className={
+                          'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                        }
                       >
-                        {item.name}
+                        {item.text}
                       </a>
                     ))}
                   </div>
@@ -68,20 +57,16 @@ export default function Nav() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
+              {buttons.map((item) => (
                 <Disclosure.Button
-                  key={item.name}
+                  key={item.text}
                   as="a"
                   href={item.href}
-                  className={classNames(
-                    item.current
-                      ? 'bg-gray-900 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
+                  className={
+                    'text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                  }
                 >
-                  {item.name}
+                  {item.text}
                 </Disclosure.Button>
               ))}
             </div>
