@@ -45,7 +45,7 @@ export default function Banner() {
                 <div className=" aspect-w-16 aspect-h-9 lg:aspect-1">
                   <Image
                     className="rounded-lg shadow-lg object-cover object-center"
-                    src="/banner.jpeg"
+                    src="/home-banner.jpeg"
                     alt="Whitney leaning against a railing on a downtown street"
                     layout="fill"
                   />

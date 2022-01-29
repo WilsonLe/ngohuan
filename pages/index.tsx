@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Banner from '../components/Banner';
-import BlogTypes from '../components/BlogTypes';
+import Banner from '../components/Home/Banner';
+import BlogTypes from '../components/Home/BlogTypes';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
-import PubTypes from '../components/PubTypes';
+import PubTypes from '../components/Home/PubTypes';
 
 const Home: NextPage = () => {
   return (
