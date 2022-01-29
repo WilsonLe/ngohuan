@@ -4,6 +4,7 @@ export type BlogData = {
   order: string;
   description: string;
   thumbnailURL: string;
+  thumbnailAlt: string;
   htmlContent: string;
 };
 

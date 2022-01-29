@@ -1,33 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import config from '../../config';
 
-const pubs = [
-  {
-    title: 'Journal Papers',
-    href: '/publications/journal-papers',
-    description:
-      'Here lies my journal paper. Temporary implementation, tell me what you want for this text.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-  },
-  {
-    title: 'Conference Proceedings',
-    href: '/publications/conference-proceedings',
-    description:
-      'Here lies my conference proceedings. Temporary implementation, tell me what you want for this text.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-  },
-  {
-    title: 'Technical Reports',
-    href: '/publications/technical-reports',
-    description:
-      'Here lies my technical reports. Temporary implementation, tell me what you want for this text.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-  },
-];
+const pubs = config.homePage.publications.cards;
 
 export default function PubTypes() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -46,11 +22,10 @@ export default function PubTypes() {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            My Publications
+            {config.homePage.publications.title}
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Here lies my Publications. Temporary implementation, tell me what
-            you want for this text.
+            {config.homePage.publications.subtitle}
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -65,7 +40,7 @@ export default function PubTypes() {
                         src={pub.imageUrl}
                         height={192}
                         width={imageWidth}
-                        alt=""
+                        alt={pub.imageAlt}
                       />
                     </div>
                   </div>

@@ -5,8 +5,18 @@ import { BlogData, BlogHeaderData, BlogType } from '../types';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-const personalBlogDir = path.join(process.cwd(), 'uploads', 'personal-blogs');
-const researchBlogDir = path.join(process.cwd(), 'uploads', 'research-blogs');
+const personalBlogDir = path.join(
+  process.cwd(),
+  'public',
+  'uploads',
+  'personal-blogs'
+);
+const researchBlogDir = path.join(
+  process.cwd(),
+  'public',
+  'uploads',
+  'research-blogs'
+);
 
 /**
  * utility function to get all blog ids from personal blog upload directory
@@ -75,6 +85,7 @@ export async function getSortedBlogHeadersData(blogType: BlogType) {
           title: matterResult.data.title,
           description: matterResult.data.description,
           thumbnailURL: matterResult.data.thumbnailURL,
+          thumbnailAlt: matterResult.data.thumbnailAlt,
         };
         return blogHeaderData;
       } else {
@@ -117,7 +128,8 @@ export async function getBlogData(id: string, blogType: BlogType) {
     'order' in matterResult.data &&
     'title' in matterResult.data &&
     'description' in matterResult.data &&
-    'thumbnailURL' in matterResult.data
+    'thumbnailURL' in matterResult.data &&
+    'thumbnailAlt' in matterResult.data
   ) {
     const blogData: BlogData = {
       id,
@@ -125,6 +137,7 @@ export async function getBlogData(id: string, blogType: BlogType) {
       title: matterResult.data.title,
       description: matterResult.data.description,
       thumbnailURL: matterResult.data.thumbnailURL,
+      thumbnailAlt: matterResult.data.thumbnailAlt,
       htmlContent,
     };
     return blogData;

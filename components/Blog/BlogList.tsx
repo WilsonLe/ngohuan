@@ -25,12 +25,12 @@ const BlogList: NextPage<Props> = ({ blogType, blogHeaders }) => {
       </div>
       <div className="relative max-w-7xl mx-auto sm:p-6 lg:p-8">
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {blogHeaders.map((post) => (
+          {blogHeaders.map((blogCard) => (
             <Link
-              key={post.title}
+              key={blogCard.title}
               href={`/blogs/${
                 blogType === 'personal' ? 'personal-blogs' : 'research-blogs'
-              }/${post.id}`}
+              }/${blogCard.id}`}
             >
               <a>
                 <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -38,23 +38,20 @@ const BlogList: NextPage<Props> = ({ blogType, blogHeaders }) => {
                     <div className="h-48 w-full object-cover" ref={cardRef}>
                       <Image
                         className="h-48 w-full object-cover"
-                        src={post.thumbnailURL}
+                        src={blogCard.thumbnailURL}
                         height={192}
                         width={imageWidth}
-                        alt=""
+                        alt={blogCard.thumbnailAlt}
                       />
                     </div>
                   </div>
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-indigo-600">
-                        {post.title}
-                      </p>
-                      <p className="text-xl font-semibold text-gray-900">
-                        {post.title}
+                      <p className="text-xl font-medium text-indigo-600">
+                        {blogCard.title}
                       </p>
                       <p className="mt-3 text-base text-gray-500">
-                        {post.description}
+                        {blogCard.description}
                       </p>
                     </div>
                   </div>

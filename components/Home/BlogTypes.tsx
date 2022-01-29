@@ -1,25 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import config from '../../config';
 import { useEffect, useRef, useState } from 'react';
 
-const posts = [
-  {
-    title: 'Research Blogs',
-    href: 'blogs/research-blogs',
-    description:
-      'Here lies my research blogs. Temporary implementation, tell me what you want for this text.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-  },
-  {
-    title: 'Personal Blogs',
-    href: 'blogs/personal-blogs',
-    description:
-      'Here lies my personal blogs. Temporary implementation, tell me what you want for this text.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-  },
-];
+const cards = config.homePage.blogs.cards;
 
 export default function BlogTypes() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -38,15 +22,14 @@ export default function BlogTypes() {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            My Blogs
+            {config.homePage.blogs.title}
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Here lies my blogs. Temporary implementation, tell me what you want
-            for this text.
+            {config.homePage.blogs.subtitle}
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none">
-          {posts.map((post) => (
+          {cards.map((post) => (
             <Link key={post.title} href={post.href}>
               <a>
                 <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -57,7 +40,7 @@ export default function BlogTypes() {
                         src={post.imageUrl}
                         height={192}
                         width={imageWidth}
-                        alt=""
+                        alt={post.imageAlt}
                       />
                     </div>
                   </div>
