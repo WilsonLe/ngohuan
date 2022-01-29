@@ -1,18 +1,20 @@
-import { GetStaticProps, NextPage } from 'next';
-import { useEffect } from 'react';
-import PersonalBlogBanner from '../../../components/Blog/Banner/PersonalBlogBanner';
-import PersonalBlogList from '../../../components/Blog/BlogList/PersonalBlogList';
-import Footer from '../../../components/Footer';
-import Nav from '../../../components/Nav';
-import { getSortedBlogHeadersData } from '../../../lib/blogs';
 import { BlogHeaderData } from '../../../types';
+import { GetStaticProps, NextPage } from 'next';
+import { getSortedBlogHeadersData } from '../../../lib/blogs';
+import Nav from '../../../components/Nav';
+import BlogBanner from '../../../components/Blog/BlogBanner';
+import BlogList from '../../../components/Blog/BlogList';
+import Footer from '../../../components/Footer';
 
 interface Props {
   blogHeaders: BlogHeaderData[];
 }
 
 const getStaticProps: GetStaticProps = async () => {
-  const blogHeaders: BlogHeaderData[] = await getSortedBlogHeadersData();
+  const blogHeaders: BlogHeaderData[] = await getSortedBlogHeadersData(
+    'personal'
+  );
+
   return {
     props: { blogHeaders },
   };
@@ -25,8 +27,8 @@ const PersonalBlogs: NextPage<Props> = ({ blogHeaders }) => {
         <Nav />
       </nav>
       <main>
-        <PersonalBlogBanner />
-        <PersonalBlogList blogHeaders={blogHeaders} />
+        <BlogBanner blogType="personal" />
+        <BlogList blogType="personal" blogHeaders={blogHeaders} />
       </main>
       <footer>
         <Footer />

@@ -5,6 +5,6 @@ thumbnailURL: /logo.jpg
 description: description
 ---
 
-# HEADER 1 OF MY PERSONAL BLOG
+# HEADING 1 OF MY RESEARCH BLOG
 
 and this is the content if my first blog

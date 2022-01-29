@@ -2,14 +2,14 @@ import { GetStaticProps, NextComponentType, NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { getSortedBlogHeadersData } from '../../../lib/blogs';
-import { BlogHeaderData } from '../../../types';
+import { BlogHeaderData, BlogType } from '../../types';
 
 interface Props {
+  blogType: BlogType;
   blogHeaders: BlogHeaderData[];
 }
 
-const PersonalBlogList: NextPage<Props> = ({ blogHeaders }) => {
+const BlogList: NextPage<Props> = ({ blogType, blogHeaders }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [imageWidth, setImageWidth] = useState<number>(0);
   useEffect(() => {
@@ -26,7 +26,12 @@ const PersonalBlogList: NextPage<Props> = ({ blogHeaders }) => {
       <div className="relative max-w-7xl mx-auto sm:p-6 lg:p-8">
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {blogHeaders.map((post) => (
-            <Link key={post.title} href={`/blogs/personal-blogs/${post.id}`}>
+            <Link
+              key={post.title}
+              href={`/blogs/${
+                blogType === 'personal' ? 'personal-blogs' : 'research-blogs'
+              }/${post.id}`}
+            >
               <a>
                 <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                   <div className="flex-shrink-0">
@@ -63,4 +68,4 @@ const PersonalBlogList: NextPage<Props> = ({ blogHeaders }) => {
   );
 };
 
-export default PersonalBlogList;
+export default BlogList;

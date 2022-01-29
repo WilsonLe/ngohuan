@@ -1,25 +1,31 @@
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
-import { BlogData, BlogHeaderData } from '../types';
+import { BlogData, BlogHeaderData, BlogType } from '../types';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-const personalBlogDirectory = path.join(
-  process.cwd(),
-  'uploads',
-  'personal-blogs'
-);
+const personalBlogDir = path.join(process.cwd(), 'uploads', 'personal-blogs');
+const researchBlogDir = path.join(process.cwd(), 'uploads', 'research-blogs');
 
 /**
  * utility function to get all blog ids from personal blog upload directory
  * @returns an array of id as string
  */
-export async function getAllBlogIds() {
-  const fileNames = await fs.readdir(personalBlogDirectory);
+export async function getAllBlogIds(blogType: BlogType) {
+  let fileNames: string[];
+  if (blogType === 'personal') {
+    fileNames = await fs.readdir(personalBlogDir);
+  } else if (blogType === 'research') {
+    fileNames = await fs.readdir(researchBlogDir);
+  } else {
+    throw 'Invalid category';
+  }
+
   const postIds = fileNames.map((fileName) => ({
     params: { id: fileName.replace(/\.md$/, '') },
   }));
+
   return postIds;
 }
 
@@ -27,9 +33,16 @@ export async function getAllBlogIds() {
  * utility function to get all blog data from personal blog upload directory
  * @returns an array of blog data
  */
-export async function getSortedBlogHeadersData() {
-  // Get file names under "personalBlogDirectory"
-  const fileNames = await fs.readdir(personalBlogDirectory);
+export async function getSortedBlogHeadersData(blogType: BlogType) {
+  let fileNames: string[];
+  if (blogType === 'personal') {
+    fileNames = await fs.readdir(personalBlogDir);
+  } else if (blogType === 'research') {
+    fileNames = await fs.readdir(researchBlogDir);
+  } else {
+    throw 'Invalid category';
+  }
+
   const markdownFiles = fileNames.filter((name) => name.endsWith('.md'));
   const allPostsData = await Promise.all(
     markdownFiles.map(async (fileName) => {
@@ -37,9 +50,16 @@ export async function getSortedBlogHeadersData() {
       const id = fileName.replace(/\.md$/, '');
 
       // Read markdown file as string
-      const fullPath = path.join(personalBlogDirectory, fileName);
-      const fileContents = await fs.readFile(fullPath, 'utf8');
+      let fullPath: string;
+      if (blogType === 'personal') {
+        fullPath = path.join(personalBlogDir, fileName);
+      } else if (blogType === 'research') {
+        fullPath = path.join(researchBlogDir, fileName);
+      } else {
+        throw 'Invalid category';
+      }
 
+      const fileContents = await fs.readFile(fullPath, 'utf8');
       const matterResult = matter(fileContents);
 
       // validate matter result
@@ -72,8 +92,16 @@ export async function getSortedBlogHeadersData() {
   );
 }
 
-export async function getBlogData(id: string) {
-  const fullPath = path.join(personalBlogDirectory, `${id}.md`);
+export async function getBlogData(id: string, blogType: BlogType) {
+  let fullPath: string;
+  if (blogType === 'personal') {
+    fullPath = path.join(personalBlogDir, `${id}.md`);
+  } else if (blogType === 'research') {
+    fullPath = path.join(researchBlogDir, `${id}.md`);
+  } else {
+    throw 'Invalid category';
+  }
+
   const fileContents = await fs.readFile(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section

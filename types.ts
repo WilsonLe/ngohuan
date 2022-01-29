@@ -8,3 +8,7 @@ export type BlogData = {
 };
 
 export type BlogHeaderData = Omit<BlogData, 'htmlContent'>;
+
+export type BlogType = 'research' | 'personal';
+
+export type PubType = 'journal' | 'technical' | 'conference';

@@ -1,6 +1,4 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import PersonalBlogBanner from '../../../components/Blog/Banner/PersonalBlogBanner';
-import PersonalBlogList from '../../../components/Blog/BlogList/PersonalBlogList';
 import Footer from '../../../components/Footer';
 import Nav from '../../../components/Nav';
 import { getAllBlogIds, getBlogData } from '../../../lib/blogs';
@@ -11,7 +9,7 @@ interface Props {
 }
 
 const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await getAllBlogIds();
+  const paths = await getAllBlogIds('personal');
   return {
     paths,
     fallback: false,
@@ -19,7 +17,7 @@ const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const getStaticProps: GetStaticProps = async ({ params }) => {
-  const blogData = await getBlogData(params?.id as string);
+  const blogData = await getBlogData(params?.id as string, 'personal');
   return {
     props: { blogData },
   };
@@ -31,17 +29,25 @@ const PersonalBlog: NextPage<Props> = ({ blogData }) => {
       <nav>
         <Nav />
       </nav>
-      <main>
-        {blogData !== null ? (
-          <>
-            <h1>{blogData.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: blogData.htmlContent }} />
-          </>
-        ) : (
-          <>
-            <h1>invalid blog data, please check your markdown file</h1>
-          </>
-        )}
+      <main className="w-full">
+        <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+          {blogData !== null ? (
+            <>
+              <h1 className=" font-bold text-4xl">{blogData.title}</h1>
+              <div className="max-w-2xl mx-auto my-6">
+                <div
+                  dangerouslySetInnerHTML={{ __html: blogData.htmlContent }}
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <h1 className=" font-bold text-4xl">
+                Invalid blog data. Please check your markdown file.
+              </h1>
+            </>
+          )}
+        </div>
       </main>
       <footer>
         <Footer />
