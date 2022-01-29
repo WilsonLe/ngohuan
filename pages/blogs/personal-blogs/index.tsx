@@ -1,10 +1,24 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
+import { useEffect } from 'react';
 import PersonalBlogBanner from '../../../components/Blog/Banner/PersonalBlogBanner';
 import PersonalBlogList from '../../../components/Blog/BlogList/PersonalBlogList';
 import Footer from '../../../components/Footer';
 import Nav from '../../../components/Nav';
+import { getSortedBlogHeadersData } from '../../../lib/blogs';
+import { BlogHeaderData } from '../../../types';
 
-const PersonalBlog: NextPage = () => {
+interface Props {
+  blogHeaders: BlogHeaderData[];
+}
+
+const getStaticProps: GetStaticProps = async () => {
+  const blogHeaders: BlogHeaderData[] = await getSortedBlogHeadersData();
+  return {
+    props: { blogHeaders },
+  };
+};
+
+const PersonalBlogs: NextPage<Props> = ({ blogHeaders }) => {
   return (
     <>
       <nav>
@@ -12,7 +26,7 @@ const PersonalBlog: NextPage = () => {
       </nav>
       <main>
         <PersonalBlogBanner />
-        <PersonalBlogList />
+        <PersonalBlogList blogHeaders={blogHeaders} />
       </main>
       <footer>
         <Footer />
@@ -20,5 +34,5 @@ const PersonalBlog: NextPage = () => {
     </>
   );
 };
-
-export default PersonalBlog;
+export { getStaticProps };
+export default PersonalBlogs;

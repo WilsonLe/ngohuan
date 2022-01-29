@@ -1,22 +1,15 @@
+import { GetStaticProps, NextComponentType, NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { PostData } from '../../../types';
+import { getSortedBlogHeadersData } from '../../../lib/blogs';
+import { BlogHeaderData } from '../../../types';
 
-const posts: PostData[] = [
-  {
-    id: 'my-first-personal-blog',
-    title: 'My first personal blog',
-    date: 'today',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
-    thumbnailURL:
-      'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-    htmlContent: '<h1>first post</h1>',
-  },
-];
+interface Props {
+  blogHeaders: BlogHeaderData[];
+}
 
-export default function PersonalBlogList() {
+const PersonalBlogList: NextPage<Props> = ({ blogHeaders }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [imageWidth, setImageWidth] = useState<number>(0);
   useEffect(() => {
@@ -32,7 +25,7 @@ export default function PersonalBlogList() {
       </div>
       <div className="relative max-w-7xl mx-auto sm:p-6 lg:p-8">
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {posts.map((post) => (
+          {blogHeaders.map((post) => (
             <Link key={post.title} href={`/blogs/personal-blogs/${post.id}`}>
               <a>
                 <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -68,4 +61,6 @@ export default function PersonalBlogList() {
       </div>
     </div>
   );
-}
+};
+
+export default PersonalBlogList;

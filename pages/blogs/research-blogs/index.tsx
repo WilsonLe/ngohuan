@@ -3,7 +3,7 @@ import ResearchBlogBanner from '../../../components/Blog/Banner/ResearchBlogBann
 import ResearchBlogList from '../../../components/Blog/BlogList/ResearchBlogList';
 import Footer from '../../../components/Footer';
 import Nav from '../../../components/Nav';
-const ResearchBlog: NextPage = () => {
+const ResearchBlogs: NextPage = () => {
   return (
     <>
       <nav>
@@ -20,4 +20,4 @@ const ResearchBlog: NextPage = () => {
   );
 };
 
-export default ResearchBlog;
+export default ResearchBlogs;

@@ -3,15 +3,15 @@ import PersonalBlogBanner from '../../../components/Blog/Banner/PersonalBlogBann
 import PersonalBlogList from '../../../components/Blog/BlogList/PersonalBlogList';
 import Footer from '../../../components/Footer';
 import Nav from '../../../components/Nav';
-import { getAllPostIds } from '../../../lib/blogs';
-import { PostData } from '../../../types';
+import { getAllBlogIds, getBlogData } from '../../../lib/blogs';
+import { BlogData } from '../../../types';
 
 interface Props {
-  postData: PostData;
+  blogData: BlogData | null;
 }
 
 const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await getAllPostIds();
+  const paths = await getAllBlogIds();
   return {
     paths,
     fallback: false,
@@ -19,27 +19,29 @@ const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData: PostData = {
-    title: 'hello world',
-    date: 'today',
-    category: 'personal',
-    htmlContent: '<h1>CONTENT</h1>',
-  };
+  const blogData = await getBlogData(params?.id as string);
   return {
-    props: { postData },
+    props: { blogData },
   };
 };
 
-const PersonalBlog: NextPage<Props> = ({ postData }) => {
+const PersonalBlog: NextPage<Props> = ({ blogData }) => {
   return (
     <>
       <nav>
         <Nav />
       </nav>
       <main>
-        <h1>{postData.title}</h1>
-        <h1>{postData.date}</h1>
-        <div dangerouslySetInnerHTML={{ __html: postData.htmlContent }} />
+        {blogData !== null ? (
+          <>
+            <h1>{blogData.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: blogData.htmlContent }} />
+          </>
+        ) : (
+          <>
+            <h1>invalid blog data, please check your markdown file</h1>
+          </>
+        )}
       </main>
       <footer>
         <Footer />
