@@ -1,6 +1,6 @@
 ---
-title: first
-order: 1
+title: second
+order: 2
 thumbnailURL: /logo.jpg
 thumbnailAlt: description of your thumbnail
 description: description

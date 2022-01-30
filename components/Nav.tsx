@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import config from '../config';
+import Link from 'next/link';
 
 const buttons = config.navBar.buttons;
 
@@ -25,17 +26,22 @@ export default function Nav() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
-                <div className="flex-shrink-0 flex items-center">
-                  <div className="h-8 w-32">
-                    <Image
-                      className="object-contain"
-                      src={config.navBar.logo.url}
-                      width={128}
-                      height={32}
-                      alt={config.navBar.logo.alt}
-                    />
-                  </div>
-                </div>
+                <Link href="/">
+                  <a>
+                    <div className="flex-shrink-0 flex items-center">
+                      <div className="h-8 w-32">
+                        <Image
+                          className="object-contain"
+                          src={config.navBar.logo.url}
+                          width={128}
+                          height={32}
+                          alt={config.navBar.logo.alt}
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {buttons.map((item) => (

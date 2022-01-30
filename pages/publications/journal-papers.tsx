@@ -10,8 +10,6 @@ interface Props {
 
 const getStaticProps: GetStaticProps = async () => {
   const pubsData = await getPubsData('journal');
-  console.log(pubsData);
-
   return {
     props: { pubsData },
   };

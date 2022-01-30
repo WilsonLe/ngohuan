@@ -15,8 +15,6 @@ const getStaticProps: GetStaticProps = async () => {
   const blogHeaders: BlogHeaderData[] = await getSortedBlogHeadersData(
     'research'
   );
-  console.log(blogHeaders);
-
   return {
     props: { blogHeaders },
   };

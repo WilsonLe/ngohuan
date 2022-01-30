@@ -1,10 +1,7 @@
 import path from 'path';
 import fs from 'fs/promises';
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
 import { PubType } from '../types';
-const uploadDir = path.join(process.cwd(), 'uploads');
+const uploadDir = path.join(process.cwd(), 'public', 'uploads');
 
 export async function getPubsData(pubType: PubType) {
   let fullPath: string;

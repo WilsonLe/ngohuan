@@ -99,7 +99,7 @@ export async function getSortedBlogHeadersData(blogType: BlogType) {
   );
   // Sort posts by date
   return filteredAllPostsData.sort(
-    (a, b) => parseInt(a.order) - parseInt(b.order)
+    (a, b) => parseInt(b.order) - parseInt(a.order)
   );
 }
 
