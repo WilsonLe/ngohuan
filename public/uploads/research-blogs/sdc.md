@@ -15,13 +15,13 @@ The competition is held in Vancouver, British Columbia and includes a lot of exc
 <b>Seismic Load Mechanism:</b> 
 Due to the acceleration of the ground relative to the structure itself, we can earthquake forces is a ficticious force acting horizontally on any object with significant mass. This force is very similar in direction and behavior to wind forces. Therefore, the building behaves much like a cantilever beam where the maximum moment is occuring at the bottom of the building.
 <p align="center">
-  <img src="/images/research-blogs/sdc/Picture1.png" width = 500/>
+  <img src="/images/research-blogs/sdc/Picture1.png" width = 200/>
   <br>
 	Figure 1. Illustration of Seismic Load
 </p>
 Since the lobby is twice as high as the remaining stories, its Euler Critical Buckling force is four times weaker than others column. The internal compression force are much greater as well due to the maximum moment explained earlier. Therefore, we reinforce the lobby and introduce middle and angle bracing to counteract this phenomena.
 <p align="center">
-  <img src="/images/research-blogs/sdc/Picture3.png" width = 1000/>
+  <img src="/images/research-blogs/sdc/Picture3.png" width = 700/>
   <br>
 	Figure 2. Lobby Bracing
 </p>
@@ -29,7 +29,7 @@ Since the lobby is twice as high as the remaining stories, its Euler Critical Bu
 <b>Horizontal In-plan Bracing due to Structural Irregularity:</b> 
 The building maximum footprint as defined in the rule has a t-shape and thus, it introduces structural irregularity into the analysis. The center of diaphargm does not lie in the middle of the floor plan. Therefore, the earthquake will have an effect on the floor in the same way that a torsional force is applied on a T-beam. Therefore, we add diagonal bracing to the floor since the beams alone are not enough to withstand this force.
 <p align="center">
-  <img src="/images/research-blogs/sdc/Picture4.png" width = 500/>
+  <img src="/images/research-blogs/sdc/Picture4.png" width = 200/>
   <br>
 	Figure 3. Torsional Force
 </p>
@@ -37,7 +37,7 @@ The building maximum footprint as defined in the rule has a t-shape and thus, it
 <b>Structural Bracing Topology Optimization:</b> 
 The term topology optimizationis a process of finding a better topology in increasing structural strength against a specific type of load (i.e., earthquake) with less material. The traditional bracing for lateral load is an X-frame. However, we use a different type of bracing namely super bracing. The analysis shows that it has twice the strength-to-weight ratio compared to X-bracing. The rationale of super bracing is to distribute less load to the outer columns since it is the member with the lowest Euler critical buckling load due to its longer length.
 <p align="center">
-  <img src="/images/research-blogs/sdc/Picture5.png" width = 1000/>
+  <img src="/images/research-blogs/sdc/Picture5.png" width = 700/>
   <br>
 	Figure 4. Topology Optimization with X-bracing (left) and Super Bracing (right)
 </p>
@@ -52,7 +52,7 @@ The building is first modeled in Revit Structure. Revit allows a 3D model of the
 <b>Construction</b>
 With the experience from last year, the team printed a 3D mold to fit the floor beams to ensure the accuracy in dimension. The floor beams are then constructed individually. On the base plate, several foundations (i.e., holes) are excavated and the lobby’s columns are fixated into these to ensure a full rigid connection. Then, the remaining columns and bracing are glued together to produce the final structure.
 <p align="center">
-  <img src="/images/research-blogs/sdc/Picture7.png" width = 700/>
+  <img src="/images/research-blogs/sdc/Picture7.png" width = 300/>
   <br>
 	Figure 6. Construction of the Building
 </p>
