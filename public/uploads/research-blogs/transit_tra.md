@@ -1,7 +1,7 @@
 ---
 title: Optimal Asset Management Strategies for Mixed Transit Fleet
 order: 2
-thumbnailURL: /images/research-blogs/transit_tra/nashville-transport-facebook.jpeg
+thumbnailURL: /images/research-blogs/transit_tra/nashville-transport-facebook.jpg
 thumbnailAlt: transportation asset management
 description: How optimization can help with transit's asset management?
 ---
