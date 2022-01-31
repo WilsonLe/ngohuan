@@ -3,7 +3,7 @@ title: Memphis Transit Asset Management
 order: 1
 thumbnailURL: /images/research-blogs/mata/Image_19.png
 thumbnailAlt: transportation asset management
-description: Sponsored by Memphis Area Transit Authority
+description: How Memphis Transit Authority manage their asset in order to provide the best quality of service to Memphians?
 ---
 
 # 1. Introduction
