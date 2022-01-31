@@ -3,7 +3,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import { BlogData, BlogHeaderData, BlogType } from '../types';
 import { remark } from 'remark';
-import html from 'remark-html';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
 const personalBlogDir = path.join(
   process.cwd(),
@@ -119,10 +122,13 @@ export async function getBlogData(id: string, blogType: BlogType) {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
-    .use(html)
+    .use(remarkParse)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
     .process(matterResult.content);
-
   const htmlContent = processedContent.toString();
+  console.log(htmlContent);
 
   if (
     'order' in matterResult.data &&
