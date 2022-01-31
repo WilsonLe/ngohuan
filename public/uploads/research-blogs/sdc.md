@@ -1,5 +1,5 @@
 ---
-title: Seismic Design Competition 
+title: 2019 Seismic Design Competition in Vancouver, BC
 order: 4
 thumbnailURL: /images/research-blogs/sdc/20190309_053430570_iOS.jpg
 thumbnailAlt: Seismic Design Competition 
@@ -63,4 +63,6 @@ The author is the main person that works on the structural design of this struct
 ## Additional Resources
 <a href="/pdf/SDC_2019_UofM_Poster.pdf">Link to Poster</a> 
 <a href="/pdf/SDC_2019_UofM_Presentation.pdf">Link to Presentation</a> 
+<a href="https://photos.app.goo.gl/tzYEt6n5qfowAR168">Photos from the competition</a> 
+
 
