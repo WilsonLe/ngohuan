@@ -40,7 +40,4 @@ In conclusion, this research project successfully develops a framework for deplo
 ## Author's Contribution in this project
 The study concept and methodology are developed by all authors listed in the paper. This article author coded the methodology, conducted both case study applications, and wrote the majority of the paper.
 
-## Additional Resources
-<a href="/pdf/SDC_2019_UofM_Poster.pdf">Link to Poster</a> 
-<a href="/pdf/SDC_2019_UofM_Presentation.pdf">Link to Presentation</a> 
 
