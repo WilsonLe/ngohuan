@@ -65,7 +65,7 @@ export default function Banner() {
             <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
               <p>{config.homePage.banner.paragraph1}</p>
               <br />
-              <p>{config.homePage.banner.paragraph1}</p>
+              <p>{config.homePage.banner.paragraph2}</p>
             </div>
           </div>
         </div>
