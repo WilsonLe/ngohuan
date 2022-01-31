@@ -29,8 +29,8 @@ const JournalPapers: NextPage<Props> = ({ pubsData }) => {
             </h1>
           </div>
           <div
+            id="pub-wrapper"
             dangerouslySetInnerHTML={{ __html: pubsData }}
-            className="list-decimal"
           />
         </div>
       </main>

@@ -28,7 +28,10 @@ const ConferenceProceedings: NextPage<Props> = ({ pubsData }) => {
               {config.conferenceProceedings.title}
             </h1>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: pubsData }} />
+          <div
+            id="pub-wrapper"
+            dangerouslySetInnerHTML={{ __html: pubsData }}
+          />
         </div>
       </main>
       <footer>
