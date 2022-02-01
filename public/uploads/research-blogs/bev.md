@@ -1,5 +1,5 @@
 ---
-title: Optimal Deployment of Dynamic Wireless Charging for Battery Electric Vehicle
+title: Locating Dynamic Wireless Charging for Battery Electric Vehicle
 order: 5
 thumbnailURL: /images/research-blogs/bev/bev.jpg
 thumbnailAlt: Dynamic Wireless Charging 
