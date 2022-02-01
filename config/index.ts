@@ -71,10 +71,10 @@ const config = {
 
       // text2 value
       text2: '309 Engineering Science Building',
-	  // text3 value
-      text2: 'Department of Civil Engineering',
-	  // text4 value
-      text2: 'The University of Memphis',
+      // text3 value
+      text3: 'Department of Civil Engineering',
+      // text4 value
+      text4: 'The University of Memphis',
     },
   },
 
