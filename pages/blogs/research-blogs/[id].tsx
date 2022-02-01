@@ -33,7 +33,6 @@ const ResearchBlog: NextPage<Props> = ({ blogData }) => {
         <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
           {blogData !== null ? (
             <>
-              <h1 className=" font-bold text-4xl">{blogData.title}</h1>
               <div className="max-w-2xl mx-auto my-6">
                 <div
                   className="markdown-body"

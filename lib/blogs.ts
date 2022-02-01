@@ -128,7 +128,6 @@ export async function getBlogData(id: string, blogType: BlogType) {
     .use(rehypeStringify)
     .process(matterResult.content);
   const htmlContent = processedContent.toString();
-  console.log(htmlContent);
 
   if (
     'order' in matterResult.data &&
