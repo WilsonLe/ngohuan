@@ -71,8 +71,15 @@ const config = {
 
       // text2 value
       text2: '309 Engineering Science Building',
+
+      // description of what text3 is. Useful for screen reader.
+      text3_screen_reader_info: 'Phone Number',
+
       // text3 value
       text3: 'Department of Civil Engineering',
+
+      // description of what text4 is. Useful for screen reader.
+      text4_screen_reader_info: 'Phone Number',
       // text4 value
       text4: 'The University of Memphis',
     },
@@ -87,6 +94,9 @@ const config = {
     description:
       "Ngo Huan's personal website for posting blogs and publications",
 
+    // resume url
+    resumeURL: '/pdf/resume.pdf',
+
     // home page banner config
     banner: {
       // url of banner image
@@ -95,6 +105,9 @@ const config = {
       // description of banner image
       imageAlt: 'Huan Ngo',
 
+      // header1 value
+      header1: '',
+
       // header2 value
       header2: 'Huan Ngo',
 
@@ -102,7 +115,7 @@ const config = {
       paragraph1: `I am a third year PhD Student in Transportation Engineering at the University of Memphis and my advisor is Professor Sabyasachee Mishra. My current main research areas are (1) minimizing the transportation environmental impact especially in dense urban area, (2) making informed transportation planning decision based on data, and (3) promoting mobility as a service and designing cities for people instead of car. I also work on funded projects for local and state transportation agencies. I am honored with the Herff Fellowship for the PhD program. For more information about my professional history, please follow the link below:`,
 
       // paragraph2 value
-      paragraph2: <a href="/pdf/Huan_CV2.pdf">Download CV</a>,
+      paragraph2: '',
     },
 
     // home page blog section

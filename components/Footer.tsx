@@ -24,62 +24,17 @@ export default function Footer() {
                 </dt>
                 <dd>{config.footer.topLeft.text2}</dd>
               </div>
-            </dl>
-          </div>
-          <div>
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
-              {config.footer.topRight.title}
-            </h3>
-            <dl className="mt-2 text-base text-gray-500">
-              <div>
+              <div className="mt-1">
                 <dt className="sr-only">
-                  {config.footer.topRight.text1_screen_reader_info}
+                  {config.footer.topLeft.text3_screen_reader_info}
                 </dt>
-                <dd>{config.footer.topRight.text1}</dd>
+                <dd>{config.footer.topLeft.text3}</dd>
               </div>
               <div className="mt-1">
                 <dt className="sr-only">
-                  {config.footer.topRight.text2_screen_reader_info}
+                  {config.footer.topLeft.text4_screen_reader_info}
                 </dt>
-                <dd>{config.footer.topRight.text2}</dd>
-              </div>
-            </dl>
-          </div>
-          <div>
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
-              {config.footer.bottomLeft.title}
-            </h3>
-            <dl className="mt-2 text-base text-gray-500">
-              <div>
-                <dt className="sr-only">
-                  {config.footer.bottomLeft.text1_screen_reader_info}
-                </dt>
-                <dd> {config.footer.bottomLeft.text1}</dd>
-              </div>
-              <div className="mt-1">
-                <dt className="sr-only">
-                  {config.footer.bottomLeft.text2_screen_reader_info}
-                </dt>
-                <dd>{config.footer.bottomLeft.text2}</dd>
-              </div>
-            </dl>
-          </div>
-          <div>
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
-              {config.footer.bottomRight.title}
-            </h3>
-            <dl className="mt-2 text-base text-gray-500">
-              <div>
-                <dt className="sr-only">
-                  {config.footer.bottomRight.text1_screen_reader_info}
-                </dt>
-                <dd>{config.footer.bottomRight.text1}</dd>
-              </div>
-              <div className="mt-1">
-                <dt className="sr-only">
-                  {config.footer.bottomRight.text2_screen_reader_info}
-                </dt>
-                <dd>{config.footer.bottomRight.text2}</dd>
+                <dd>{config.footer.topLeft.text4}</dd>
               </div>
             </dl>
           </div>

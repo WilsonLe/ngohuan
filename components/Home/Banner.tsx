@@ -67,6 +67,14 @@ export default function Banner() {
               <br />
               <p>{config.homePage.banner.paragraph2}</p>
             </div>
+            <div className="mt-5 max-w-2xl mx-auto">
+              <button
+                type="button"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <a href={config.homePage.resumeURL}>Resume</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
