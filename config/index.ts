@@ -4,7 +4,7 @@ const config = {
     // website logo, displayed on the top left
     logo: {
       // the logo url. "/logo.jpg" means in folder "public", file "logo.jpg"
-      url: '/logo.jpg',
+      url: '/mem_logo2.jpg',
 
       // description of the logo. This is useful when the a reader fails to load the logo, this text will be displayed instead.
       alt: 'Ngo Huan',
@@ -58,71 +58,23 @@ const config = {
     // infomation of the top left grid
     topLeft: {
       // title for top left grid
-      title: 'Collaborate',
+      title: 'Huan Hoang Ngo, E.I.T',
 
       // description of what text1 is. Useful for screen reader.
       text1_screen_reader_info: 'Email',
 
       // text1 value
-      text1: 'support@example.com',
+      text1: 'hhngo[at]memphis[dot]com',
 
       // description of what text2 is. Useful for screen reader.
       text2_screen_reader_info: 'Phone Number',
 
       // text2 value
-      text2: '+1 (555) 123-4567',
-    },
-
-    // infomation of the top right grid
-    topRight: {
-      // title for top right grid
-      title: 'Press',
-
-      // description of what text1 is. Useful for screen reader.
-      text1_screen_reader_info: 'Email',
-
-      // text2 value
-      text1: 'support@example.com',
-
-      // description of what text2 is. Useful for screen reader.
-      text2_screen_reader_info: 'Phone Number',
-
-      // text2 value
-      text2: '+1 (555) 123-4567',
-    },
-
-    // infomation of the bottom left grid
-    bottomLeft: {
-      // title for bototm left grid
-      title: 'Join our team',
-
-      // description of what text1 is. Useful for screen reader.
-      text1_screen_reader_info: 'Email',
-
-      // text1 value
-      text1: 'support@example.com',
-
-      // description of what text2 is. Useful for screen reader.
-      text2_screen_reader_info: 'Phone Number',
-
-      // text2 value
-      text2: '+1 (555) 123-4567',
-    },
-    bottomRight: {
-      // title for bottom right grid
-      title: 'Say hello',
-
-      // description of what text1 is. Useful for screen reader.
-      text1_screen_reader_info: 'Email',
-
-      // text1 value
-      text1: 'support@example.com',
-
-      // description of what text2 is. Useful for screen reader.
-      text2_screen_reader_info: 'Phone Number',
-
-      // text2 value
-      text2: '+1 (555) 123-4567',
+      text2: '309 Engineering Science Building',
+	  // text3 value
+      text2: 'Department of Civil Engineering',
+	  // text4 value
+      text2: 'The University of Memphis',
     },
   },
 
@@ -138,22 +90,19 @@ const config = {
     // home page banner config
     banner: {
       // url of banner image
-      imageURL: '/images/home/banner.jpeg',
+      imageURL: '/images/home/IMG_1495_2.png',
 
       // description of banner image
-      imageAlt: 'temporary implementation. replace this',
-
-      // header1 value
-      header1: 'Case study',
+      imageAlt: 'Huan Ngo',
 
       // header2 value
-      header2: 'Meet Whitney',
+      header2: 'Huan Ngo',
 
       // paragraph1 value
-      paragraph1: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+      paragraph1: `I am a third year PhD Student in Transportation Engineering at the University of Memphis and my advisor is Professor Sabyasachee Mishra. My current main research areas are (1) minimizing the transportation environmental impact especially in dense urban area, (2) making informed transportation planning decision based on data, and (3) promoting mobility as a service and designing cities for people instead of car. I also work on funded projects for local and state transportation agencies. I am honored with the Herff Fellowship for the PhD program. For more information about my professional history, please follow the link below:`,
 
       // paragraph2 value
-      paragraph2: `It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+      paragraph2: <a href="/pdf/Huan_CV2.pdf">Download CV</a>,
     },
 
     // home page blog section
