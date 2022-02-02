@@ -237,7 +237,7 @@ const config = {
     // research blog banner
     banner: {
       // banner image url
-      imageURL: '/images/research-blogs/banner.jpeg',
+      imageURL: '/images/home/research.jpg',
 
       // banner image description
       imageAlt: 'temporary implementation',
@@ -247,7 +247,7 @@ const config = {
 
       // banner subtitle
       subtitle:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "This blog includes discussion on my research projects.",
     },
   },
   // personal blog page
@@ -255,7 +255,7 @@ const config = {
     // pesronal blog banner
     banner: {
       // banner image url
-      imageURL: '/images/research-blogs/banner.jpeg',
+      imageURL: '/images/home/personal.jpg',
 
       // banner image description
       imageAlt: 'temporary implementation',
@@ -265,7 +265,7 @@ const config = {
 
       // banner subtitle
       subtitle:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "This blog includes my travel experiences, music, perspectives, and more.",
     },
   },
 
