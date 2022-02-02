@@ -1,5 +1,5 @@
 ---
-Repositioning Autonomous Taxi Using Reinforcement Learning
+title: Repositioning Autonomous Taxi Using Reinforcement Learning
 order: 8
 thumbnailURL: /images/research-blogs/aet/waymo.jpg
 thumbnailAlt: Autonomous Taxi
