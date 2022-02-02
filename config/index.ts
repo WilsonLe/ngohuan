@@ -220,7 +220,7 @@ const config = {
 
           // card description
           description:
-            'Technical reports on funded project.\n',
+            'Technical reports on funded project.                                          ',
 
           // card thumbnail url
           imageUrl: '/images/home/technical.jpg',
