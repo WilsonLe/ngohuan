@@ -125,7 +125,7 @@ const config = {
 
       // subtitle of blog section
       subtitle:
-        'Here lies my blogs. Temporary implementation, tell me what you want for this text.',
+        '',
 
       // list of card objects
       cards: [
@@ -138,10 +138,10 @@ const config = {
 
           // card description
           description:
-            'Here lies my research blogs. Temporary implementation, tell me what you want for this text.',
+            'This blog includes discussion on my research projects.',
 
           // card thumbnail url
-          imageUrl: '/images/home/research-blog-banner.jpeg',
+          imageUrl: '/images/home/research.jpg',
 
           // card thubmnail description
           imageAlt: 'temporary implementation',
@@ -155,10 +155,10 @@ const config = {
 
           // card description
           description:
-            'Here lies my personal blogs. Temporary implementation, tell me what you want for this text.',
+            'This blog includes my travel experiences, music, perspectives, and more.',
 
           // card thumbnail url
-          imageUrl: '/images/home/personal-blog-banner.jpeg',
+          imageUrl: '/images/home/personal.jpg',
 
           // card thubmnail description
           imageAlt: 'temporary implementation',
@@ -173,7 +173,7 @@ const config = {
 
       // subtitle of publication section
       subtitle:
-        'Here lies my Publications. Temporary implementation, tell me what you want for this text.',
+        '',
 
       // list of card object
       cards: [
@@ -186,10 +186,10 @@ const config = {
 
           // card description
           description:
-            'Here lies my journal paper. Temporary implementation, tell me what you want for this text.',
+            'Researches published in scientific peer-reviewed journals.',
 
           // card thumbnail url
-          imageUrl: '/images/home/journal-papers-banner.jpeg',
+          imageUrl: '/images/home/journal2.jpg',
 
           // card thubmnail description
           imageAlt: 'temporary implementation',
@@ -203,10 +203,10 @@ const config = {
 
           // card description
           description:
-            'Here lies my conference proceedings. Temporary implementation, tell me what you want for this text.',
+            'Researches submitted to conferences and selected for poster and/or presentation.',
 
           // card thumbnail url
-          imageUrl: '/images/home/conference-proceedings-banner.jpeg',
+          imageUrl: '/images/home/conference.jpg',
 
           // card thubmnail description
           imageAlt: 'temporary implementation',
@@ -220,10 +220,10 @@ const config = {
 
           // card description
           description:
-            'Here lies my technical reports. Temporary implementation, tell me what you want for this text.',
+            'Technical reports on funded project.',
 
           // card thumbnail url
-          imageUrl: '/images/home/technical-reports-banner.jpeg',
+          imageUrl: '/images/home/technical.jpg',
 
           // card thubmnail description
           imageAlt: 'temporary implementation',
