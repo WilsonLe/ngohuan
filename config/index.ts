@@ -115,7 +115,7 @@ const config = {
       paragraph1: `Hello, I am a third year PhD Student in Transportation Engineering at the University of Memphis and my advisor is Professor Sabyasachee Mishra. My current main research areas are (1) minimizing the transportation environmental impact especially in dense urban area, (2) making informed transportation planning decision based on data, and (3) promoting mobility as a service and designing cities for people instead of car.`,
 
       // paragraph2 value
-      paragraph2: 'You can learn more about my previous researches in the Research Blog section of this website. Beside my personal research, I also work on funded projects for local and state transportation agencies. I am honored with the Herff Fellowship for the PhD program. For more information about my professional history, please follow the link below:',
+      paragraph2: 'You can learn more about my previous researches in the Research Blog section of this website. Beside my personal research, I also work on funded projects for local and state transportation agencies. During my PhD program, I am honored with the Herff Fellowship. For more information about my professional history, please follow the link below:',
     },
 
     // home page blog section
