@@ -5,7 +5,7 @@ thumbnailURL: /images/research-blogs/mata/Image_19.png
 thumbnailAlt: transportation asset management
 description: How Memphis Transit Authority manage their asset in order to provide the best quality of service to Memphians?
 ---
-
+# Memphis Area Transit Authority's Asset Management
 # 1. Introduction
 Memphis Area Transit Authority (MATA) is the public transportaiton provider for the Memphis area by offering three main type of services which are: (1) Fixed Route Buses; (2) On-demand Transit; and (3) Trolley. Fixed route buses provide routine service to a 300 square miles area and 750,000 people with annual ridership up to 7.2 million. On-demand transit aims to focus on people with disability whereas trolley have been a main tourism attraction in the city. 
 <p align="center">
