@@ -6,7 +6,7 @@ thumbnailAlt: Autonomous Taxi
 description: How repositioning autonomous taxi can improve service quality?
 ---
 # Dispatching and Repositioning Autonomous Taxi Using Reinforcement Learning
-This blog is based on an ongoing research project
+This blog is based on a conference poster and presentation at the 101st Transportation Research Board Annual Meeting. Please see the additional resource section for the poster and presentation.  
 # 1. Introduction
 Transportation Network Companies (TNC) is leveraging technology and connectivity to provide a more efficient taxi service with example such as Uber and Lyft. However, the system performance is still hindered by the spatial and temporal imbalance between supply and demand. TNC employs economic incentives such as surge pricing but only to limited success. Surge pricing has been shown to have relative weak impact on driver’s decision on accepting trip far away but siginificant impact on riders to cancel their trips. The surged price is also likely to be at an equilbrium higher than that of the efficient level. This can be addressed by introducing autonomous electric taxi (AET) into the system and repositioning these AET to balance supply and demand. This strategy can also work even if TNC still have human-driven vehicles (HV) where their objectives are considered. In addition, customer’s equity, where those with higher waiting time are prioritized, are also considered. Therefore, the objective of this research is to “*develop a framework to optimally dispatch both HV and AET, reposition, and recharge AET with the objective of minimizing the customer wait time, cancellation penalty, and AET’s operational cost*”.
 # 2. Methodology
@@ -47,3 +47,8 @@ The Framework is demonstrated on the Anaheim, California road network. The taxi 
  
 ## Author's Contribution in this project
 The author is responsible for the problem concept, methodology, modeling in software, and writing of the paper. Optimization processes in single-pickup and carpooling are coded using the General Algebraic Modeling System whereas the Reinforcement Learning model are coded in python script. Due to the complex formulation, the script does not make use of exisiting RL library such as open ai gym, but it is still built on the framework of Pytorch. Figures are plotted using ggplot2 package from R language.
+
+## Additional Resource
+<a href="/pdf/aet_poster.pdf">[Poster]</a>
+<a href="/pdf/aet_poster.pdf">[Presentation is not yet available]</a>
+
