@@ -1,49 +1,30 @@
 ---
-title: Dispatching and Repositioning Autonomous Taxi Using Reinforcement Learning
-order: 8
-thumbnailURL: /images/research-blogs/aet/waymo.jpg
-thumbnailAlt: Autonomous Taxi
-description: How repositioning autonomous taxi can improve service quality?
+title: Routing and Platooning of Mixed Autonomous Truck Fleet
+order: 9
+thumbnailURL: /images/research-blogs/truck.jpg
+thumbnailAlt: Autonomous Truck
+description: Autonomous Truck brings new opportunity to the freight system. How's best to integrate it?
 ---
-# Dispatching and Repositioning Autonomous Taxi Using Reinforcement Learning
+# Routing and Platooning of a Mixed Autonomous Truck Fleet under Capacity and Time Window Constraints
 This blog is based on an ongoing research project
 # 1. Introduction
-Transportation Network Companies (TNC) is leveraging technology and connectivity to provide a more efficient taxi service with example such as Uber and Lyft. However, the system performance is still hindered by the spatial and temporal imbalance between supply and demand. TNC employs economic incentives such as surge pricing but only to limited success. Surge pricing has been shown to have relative weak impact on driver’s decision on accepting trip far away but siginificant impact on riders to cancel their trips. The surged price is also likely to be at an equilbrium higher than that of the efficient level. This can be addressed by introducing autonomous electric taxi (AET) into the system and repositioning these AET to balance supply and demand. This strategy can also work even if TNC still have human-driven vehicles (HV) where their objectives are considered. In addition, customer’s equity, where those with higher waiting time are prioritized, are also considered. Therefore, the objective of this research is to “*develop a framework to optimally dispatch both HV and AET, reposition, and recharge AET with the objective of minimizing the customer wait time, cancellation penalty, and AET’s operational cost*”.
-# 2. Methodology
-<b>Environment Setting</b>
-This research uses a centralized approach where the main controller will make every decision for all taxi whether it is single pickup, carpooling, repositioning, recharging, or idling. The spatial setup is a road network modeled as a graph where the vertices are intersections and edges are road segment connecting these vertices. The framework assumes the taxi request’s pickup and dropoff point is at these nodes though simple adjustment can be made if these points happen to be in the middle of the edge. In temporal setup, a continuous period (i.e., 6AM to 8PM) will constitues an episode and this episode is discretized into intervals, or time period, of equal duration (i.e., 5 minutes). Therefore, an episode can be described as T = [t1, t2, t3... tn]. The model is dynamic and stochastic where only the current taxi demand is known.
+Logistic service provider (LSP) is usually tasked with delivering packages from everywhere across the country. Figure 1 below shows the freight demand between major cities in the United States. Thicker and darker lines represent more freight volume needed to be transported between the two end cities. 
 
-<b>Framework Architecture</b>
-At the start of the episode, AETs and HVs vehicle location and status and taxi demands are gathered. The framework employs 4 processes to model the decision making of the central controller. Process 1 aims to match taxi demand with current idling AETs and HVs. Customer’s wait time and HV’s time on the system are considered in the formulation. If there are unserved demand, Process 2 will match demand with single pickup AET for carpooling. If there are still unserved demand, Process 3 will match idling AET in zones nearby with demand. This is to mitigate the event where demand and taxi are very close to each other but cannot be matched from Process 1 due to different zones. For the remaining idling AET if any, Process 4 will decide on repositioning and recharging. The AET, HV, and taxi demand information are then updated and transferred to the next time period. The process is repeated until the end of the episode.
- <p align="center">
-  <img src="/images/research-blogs/aet/Image 34.png" width = 1000/>
+<p align="center">
+  <img src="/images/research-blogs/image1.png" width = 1000/>
   <br>
-	Figure 1. Framework Architecture
+	<b>Figure 1. Freight Demand between Cities in the US</b>
 </p>
 
-Process 1,2, and 3 are formulated as a mixed integer linear programming model whereas Process 4 uses reinforcement learning (RL). Reinforcement learning is an area in Machine Learning where given an environment state, an agent (i.e., the controller) will take an action, receive a reward, and the environment state is updated. Figure 2 shows an illustration of this process:
- <p align="center">
-  <img src="/images/research-blogs/aet/reinforcement-learning-fig1-700.jpg" width = 1000/>
+Thus, LSP is looking to dispatch a set of trucks to deliver all of these demands while minimizing operational cost and this problem is referred to as Vehicle Routing Problem and has gained a lot of interest as early as the 1960s. In most cases, customer requires the product to be delivered within certain time frame, which is time window constraints. The truck also can only carry certain amount of volume, which is capacity constraint. Figure 2 below shows where freight volume is mixed and consolidated, and the dispatch plan minimizes the number of trucks and distance traveled needed. Thicker and darker lines represent more truck traveling between the two end cities.
+<p align="center">
+  <img src="/images/research-blogs/image2.png" width = 1000/>
   <br>
-	Figure 2. Illustration of Reinforcement Learning
-</p>
-At current timestep t, the agent observes the current state St and use a policy function to choose an action At. After that, the action changes the environment state into S(t+1) and the agent receives a reward R(t+1). Therefore, the agent’s objective is to maximize its long-term reward accumulated at the end of the episode. 
-
-In our case, the environment state includes unserved taxi demand, number of idling AET, future available vehicles, historical demand, and number of undercharged AET. Based on this information, the agent decides how many taxi to reposition from a zone to another considering all possibilities and how many to recharge at each zone. In classic RL literature, the agent is maximizing the reward thus in our case we introduce negative cost in place of reward. The negative cost is the negative of the sum between customer wait time, cancellation penalty, repositioning cost, and undercharged AET penalty. The agent trains by playing the episode multiple times and gathers the experience in form of a tuple representing what action is taken at what state and how much reward is collected.
-# 3. Case Study and Preliminary Results
-The Framework is demonstrated on the Anaheim, California road network. The taxi demand is simulated and the TNC is managing a fleet of 250 AVs on top of HV supply drawn from a historical distribution. We introduce the Manual Allocation Model as a baseline to compare with our framework. In Manual Allocation, AV will serve the nearest customer and there is no repositioning. We then pick a taxi from Manual Allocation and our framework respectively and compare their actions throughout the day or "A Day in the Life". Figure 3 shows the trajectory of these 2 taxis and Figure 4 shows the activities by time of the day. Activities are color-coded where single-pickup, carpooling, and repositioning are colored green, red, and blue respectively.
- <p align="center">
-  <img src="/images/research-blogs/aet/Image 35.png" width = 1000/>
-  <br>
-	Figure 3. Taxi Trajectory throught the day
+	<b>Figure 2. Truck Volume between Lanes</b>
 </p>
 
- <p align="center">
-  <img src="/images/research-blogs/aet/Image 36.png" width = 1000/>
-  <br>
-	Figure 4. Taxi Activities
-</p>
- In conclusion, MA is able to fulfill 25 trips whereas our framework can fulfill 33 trips. When comparing the system as a whole, our framework is able to reduce the waiting time and number of cancellation by 75% and 73% respectively 
- 
-## Author's Contribution in this project
-The author is responsible for the problem concept, methodology, modeling in software, and writing of the paper. Optimization processes in single-pickup and carpooling are coded using the General Algebraic Modeling System whereas the Reinforcement Learning model are coded in python script. Due to the complex formulation, the script does not make use of exisiting RL library such as open ai gym, but it is still built on the framework of Pytorch. Figures are plotted using ggplot2 package from R language.
+In recent developments in the automotive industry, autonomous vehicle (AV) trucks are gaining traction and company (such as Tesla) are planning on introducing them to the market very soon. This benefits TSP in reducing the cost-per-mile operational cost since these AV truck saves on driver wages. However, the current automation level is such that government are likely to regulate AV truck to platoon behind a human-driven truck for safety reasons. LSP can still dispatch these AV trucks with normal driver and turn on the autonomous driving whenever there is an opportunity for platooning. Therefore, this research’s objective is:
+
+*Given a set of freight demand where each demand has the origin, destination, volume, and time window, this research develops a methodology to determine the routing and platooning for a fleet of truck that minimizes total system operational cost while satisfying time window and capacity constraints.*
+
+This research aims to use Multi-agent reinforcement learning to find the optimal routing and platooning plan. The basic concept is each truck will be a single agent deciding on where to start and where and when to go next. There will be multiple agents for multiple trucks. Agents have different observation and gradient descent. Howeverm agents share the same architecture of the policy function. Cooperating action between agent is encouraged such as platooning because these agents share the total reward. An Encoder-decoder architecture is used to calculate the probability of choosing the next location. In addition, several methods such as optimization and graph matching are also employed to increase the model’s accuracy.
