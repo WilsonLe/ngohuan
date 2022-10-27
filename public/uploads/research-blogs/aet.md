@@ -9,6 +9,7 @@ description: How repositioning autonomous taxi can improve service quality?
 # Dispatching and Repositioning Autonomous Taxi Using Reinforcement Learning
 
 This blog is based on a conference poster and presentation at the 101st Transportation Research Board Annual Meeting. Please see the additional resource section for the poster and presentation.
+<p><b>Keywords:</b> Reinforcement Learning, A3C, Policy Function, Autonomous Taxi, Minimum-vertex Disjoint Path Cover</p>
 
 # 1. Introduction
 
