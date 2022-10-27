@@ -9,6 +9,7 @@ description: Autonomous Truck brings new opportunity to the freight system. How 
 # Routing and Platooning of a Mixed Autonomous Truck Fleet under Capacity and Time Window Constraints
 
 This blog is based on an ongoing research project
+<p><b>Keywords:</b> Multi-agent Reinforcement Learning, Platooning, Autonomous Truck, Operation Research</p>
 
 # Introduction
 
