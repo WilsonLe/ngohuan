@@ -8,7 +8,7 @@ description: What are the engineering behind the design of a Rest Area?
 
 # Senior Design Project: Design of a Rest Area Along the proposed Interstate 69
 
-This blog is about a group project in the Senior Design Course. The author won the Dr. T. S. Wu, which is awarded to the student contributing and excelling the most in the project. 
+This blog is about a group project in the Senior Design Course. The author won the Dr. T. S. Wu award, which is dedicated to the student contributing and excelling the most in the project. 
 
 # Project Overview
 
