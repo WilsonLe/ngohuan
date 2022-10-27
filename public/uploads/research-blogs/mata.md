@@ -8,6 +8,8 @@ description: How Memphis Transit Authority manage their asset in order to provid
 
 # Memphis Area Transit Authority's Asset Management
 
+Sponsored by the Tennessee Department of Transportation
+
 # 1. Introduction
 
 Memphis Area Transit Authority (MATA) is the public transportaiton provider for the Memphis area by offering three main type of services which are: (1) Fixed Route Buses; (2) On-demand Transit; and (3) Trolley. Fixed route buses provide routine service to a 300 square miles area and 750,000 people with annual ridership up to 7.2 million. On-demand transit aims to focus on people with disability whereas trolley have been a main tourism attraction in the city.
@@ -15,12 +17,12 @@ Memphis Area Transit Authority (MATA) is the public transportaiton provider for 
 <p align="center">
   <img src="/images/research-blogs/mata/Picture1a.png" width = 1000/>
   <br>
-	Figure 1. Example of MATA fixed route transit bus
+	<b>Figure 1. Example of MATA fixed route transit bus</b>
 </p>
 <p align="center">
   <img src="/images/research-blogs/mata/Image 20.png" width = 1000/>
   <br>
-  Figure 2. Example of MATA Trolley
+	<b>Figure 2. Example of MATA Trolley</b>
 </p>
 To provide such service, MATA acquired and owned an extensive amount of assets with varying type from vehicles, facilities, to stations. A detail and strategic management of these assets is vital to the performance of the system. In fact, the Federal Transit Administration through the Fixing America’s Surface Transportation (FAST) act in October 2016 regulates local transit agency to have a Transportation Asset Management (TAM) plan. MATA as a tier I transit provider needs to have a TAM covering atleast the following elements: (1) Inventory, (2) Condition Assessment, (3) Asset Maintenance Plan, and (4) Decision Support Tool. Therefore, the main objective of this project is to compile this TAM plan.
 
@@ -39,7 +41,7 @@ Upon reviewing the state of practice for TAM (i.e., guidelines, other agency’s
 <p align="center">
   <img src="/images/research-blogs/mata/Image 21.png" width = 1000/>
   <br>
-	Figure 3. Example of a Dashboard monitoring asset inventory and health
+	<b>Figure 3. Example of a Dashboard monitoring asset inventory and health</b>
 </p>
 
 # 3. Conclusion
