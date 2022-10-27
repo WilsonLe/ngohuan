@@ -5,9 +5,13 @@ thumbnailURL: /images/research-blogs/mata/Image_19.png
 thumbnailAlt: transportation asset management
 description: How Memphis Transit Authority manage their asset in order to provide the best quality of service to Memphians?
 ---
+
 # Memphis Area Transit Authority's Asset Management
+
 # 1. Introduction
-Memphis Area Transit Authority (MATA) is the public transportaiton provider for the Memphis area by offering three main type of services which are: (1) Fixed Route Buses; (2) On-demand Transit; and (3) Trolley. Fixed route buses provide routine service to a 300 square miles area and 750,000 people with annual ridership up to 7.2 million. On-demand transit aims to focus on people with disability whereas trolley have been a main tourism attraction in the city. 
+
+Memphis Area Transit Authority (MATA) is the public transportaiton provider for the Memphis area by offering three main type of services which are: (1) Fixed Route Buses; (2) On-demand Transit; and (3) Trolley. Fixed route buses provide routine service to a 300 square miles area and 750,000 people with annual ridership up to 7.2 million. On-demand transit aims to focus on people with disability whereas trolley have been a main tourism attraction in the city.
+
 <p align="center">
   <img src="/images/research-blogs/mata/Picture1a.png" width = 1000/>
   <br>
@@ -21,6 +25,7 @@ Memphis Area Transit Authority (MATA) is the public transportaiton provider for 
 To provide such service, MATA acquired and owned an extensive amount of assets with varying type from vehicles, facilities, to stations. A detail and strategic management of these assets is vital to the performance of the system. In fact, the Federal Transit Administration through the Fixing America’s Surface Transportation (FAST) act in October 2016 regulates local transit agency to have a Transportation Asset Management (TAM) plan. MATA as a tier I transit provider needs to have a TAM covering atleast the following elements: (1) Inventory, (2) Condition Assessment, (3) Asset Maintenance Plan, and (4) Decision Support Tool. Therefore, the main objective of this project is to compile this TAM plan.
 
 # 2. Methodology
+
 Upon reviewing the state of practice for TAM (i.e., guidelines, other agency’s TAM, especially the guidelines in TCRP report 172), the following procedure is identified to deliver this project:
 
 - (1) Inventorying all asset: This step requires personnel to visit MATA headquarters and talk with different departments (i.e., revenue vehicle, maintanance and garage, system and furniture) and inventory the necessary asset. By consulting the FTA guideline and MATA peronnel, an asset hierarchy is created and tailored for MATA’s current inventory from which the asset can be categorized. For each asset, interested field are date of purchase, cost, asset type, description, and useful life.
@@ -37,8 +42,10 @@ Upon reviewing the state of practice for TAM (i.e., guidelines, other agency’s
 	Figure 3. Example of a Dashboard monitoring asset inventory and health
 </p>
 
-#  3. Conclusion
+# 3. Conclusion
+
 This project started in 2018 and the first version of TAM plan was written. By the following years, new element and methodological contribution are incrementally added and updated to compile the new version.
 
 ## Author's Contribution in this project
+
 The author worked on and delivered every step mentioned above from the start to finish under his advisor’s supervision. The author is assisted in the asset inventorying and data gathering step by another student. All progress meetings with MATA board of director are prepared and presented by the author.

@@ -55,7 +55,6 @@ export async function getSortedBlogHeadersData(blogType: BlogType) {
   } else {
     throw 'Invalid category';
   }
-
   const markdownFiles = fileNames.filter((name) => name.endsWith('.md'));
   const allPostsData = await Promise.all(
     markdownFiles.map(async (fileName) => {
@@ -96,7 +95,6 @@ export async function getSortedBlogHeadersData(blogType: BlogType) {
       }
     })
   );
-
   const filteredAllPostsData: BlogHeaderData[] = allPostsData.filter(
     (x): x is BlogHeaderData => x !== null
   );

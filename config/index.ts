@@ -95,7 +95,7 @@ const config = {
       "Ngo Huan's personal website for posting blogs and publications",
 
     // resume url
-    resumeURL: '/pdf/resume.pdf',
+    resumeURL: 'pdf/Huan_CV3.pdf',
 
     // home page banner config
     banner: {
@@ -112,10 +112,11 @@ const config = {
       header2: 'Huan Ngo',
 
       // paragraph1 value
-      paragraph1: `Hello, I am a third year PhD Student in Transportation Engineering at the University of Memphis and my advisor is Professor Sabyasachee Mishra. My current main research areas are (1) minimizing the transportation environmental impact especially in dense urban area, (2) making informed transportation planning decision based on data, and (3) promoting mobility as a service and designing cities for people instead of car.`,
+      paragraph1: `Hello, I am a final year Ph.D. Candidate majoring in Transportation Engineering under my advisor Professor Sabya Mishra. My dissertation is about “Data-driven Methodologies and its Application on Urban Mobility”. The dissertation covers four smaller studies which goes through various subjects such as optimization, algorithm design, big data analytic, graph convolution, and reinforcement learning. I believe this topic can prove equally useful to both the public and private sector as the transportation sector is moving toward electrification and automation.`,
 
       // paragraph2 value
-      paragraph2: 'You can learn more about my previous researches in the Research Blog section of this website. Beside my personal research, I also work on funded projects for local and state transportation agencies. During my PhD program, I am honored with the Herff Fellowship. For more information about my professional history, please follow the link below:',
+      paragraph2:
+        'You can learn more about my researches in the Research Blog section of this website. Beside my personal research, I also worked on funded projects for various agencies such as Tennessee Department of Transportation and Memphis Area Transit Authority. For a complete overview on my professional history, please follow the CV link below:',
     },
 
     // home page blog section
@@ -124,8 +125,7 @@ const config = {
       title: 'My Blogs',
 
       // subtitle of blog section
-      subtitle:
-        '',
+      subtitle: '',
 
       // list of card objects
       cards: [
@@ -137,8 +137,7 @@ const config = {
           href: 'blogs/research-blogs',
 
           // card description
-          description:
-            'This blog includes discussion on my research projects.',
+          description: 'This blog includes discussion on my research projects.',
 
           // card thumbnail url
           imageUrl: '/images/home/research.jpg',
@@ -172,8 +171,7 @@ const config = {
       title: 'My Publications',
 
       // subtitle of publication section
-      subtitle:
-        '',
+      subtitle: '',
 
       // list of card object
       cards: [
@@ -246,8 +244,7 @@ const config = {
       title: 'Research Blog',
 
       // banner subtitle
-      subtitle:
-        "This blog includes discussion on my research projects.",
+      subtitle: 'This blog includes discussion on my research projects.',
     },
   },
   // personal blog page
@@ -265,7 +262,7 @@ const config = {
 
       // banner subtitle
       subtitle:
-        "This blog includes my travel experiences, music, perspectives, and more.",
+        'This blog includes my travel experiences, music, perspectives, and more.',
     },
   },
 
