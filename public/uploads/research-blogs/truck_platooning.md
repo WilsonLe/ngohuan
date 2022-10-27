@@ -10,7 +10,7 @@ description: Autonomous Truck brings new opportunity to the freight system. How 
 
 This blog is based on an ongoing research project
 
-# 1. Introduction
+# Introduction
 
 Logistic service provider (LSP) is usually tasked with delivering packages from everywhere across the country. Figure 1 below shows the freight demand between major cities in the United States. Thicker and darker lines represent more freight volume needed to be transported between the two end cities.
 
@@ -32,4 +32,5 @@ In recent developments in the automotive industry, autonomous vehicle (AV) truck
 
 _Given a set of freight demand where each demand has the origin, destination, volume, and time window, this research develops a methodology to determine the routing and platooning for a fleet of truck that minimizes total system operational cost while satisfying time window and capacity constraints._
 
+# Methodology
 This research aims to use Multi-agent reinforcement learning to find the optimal routing and platooning plan. The basic concept is each truck will be a single agent deciding on where to start and where and when to go next. There will be multiple agents for multiple trucks. Agents have different observation and gradient descent. Howeverm agents share the same architecture of the policy function. Cooperating action between agent is encouraged such as platooning because these agents share the total reward. An Encoder-decoder architecture is used to calculate the probability of choosing the next location. In addition, several methods such as optimization and graph matching are also employed to increase the model’s accuracy.
