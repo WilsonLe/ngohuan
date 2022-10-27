@@ -9,6 +9,7 @@ description: How 13 Billions Taxi Trips can estimate the entire New York's Road 
 # Using New York Taxi Data To Estimate Traffic
 
 This blog is based on an ongoing research project.
+<p><b>Keywords:</b> Graph Convolution, PostgreSQL, LSTM, Big Data, Taxi, Traffic Estimation.</p>
 
 # Introduction
 
