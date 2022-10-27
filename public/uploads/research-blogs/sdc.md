@@ -9,6 +9,7 @@ description: How the University of Memphis won the third place at the 2019 Seism
 # 2019 Seismic Design Competition
 
 This blog is about the engineering behind a winning third place structure at the 2019 Seismic Design Competition in Vancouver, BC Canada.
+<p><b>Keywords:</b> Topology Optimization, ETABS, REVIT, Presentation, Teamwork</p>
 
 # 1. Competition Problem Statement
 
