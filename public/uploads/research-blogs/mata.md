@@ -8,7 +8,8 @@ description: How Memphis Transit Authority manage their asset in order to provid
 
 # Memphis Area Transit Authority's Asset Management
 
-Sponsored by the Tennessee Department of Transportation
+Sponsored by the Memphis Area Transit Authority.
+Keywords: Transit Asset Management, Power BI, Optimization, Database Management, Communication and Collaboration, Field Work.
 
 # 1. Introduction
 
