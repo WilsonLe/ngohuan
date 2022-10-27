@@ -8,7 +8,7 @@ description: What are the engineering behind the design of a Rest Area?
 
 # Senior Design Project: Design of a Rest Area Along the proposed Interstate 69
 
-This blog is about a group project for the Senior Design course as part of the requirements for graduating at the Department of Civil Engineering of The University of Memphis.
+This blog is about a group project in the Senior Design Course. The author won the Dr. T. S. Wu, which is awarded to the student contributing and excelling the most in the project. 
 
 # Project Overview
 
