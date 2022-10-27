@@ -8,7 +8,7 @@ description: How to locate Dynamic Wireless Charging in a Road Network?
 
 # Optimal Deployment of Dynamic Wireless Charging for Battery Electric Vehicle
 
-This blog talks about the research “Optimal asset management strategies for mixed transit fleet” published in the Transportation Research Part D: Transport and Environment in this link: https://doi.org/10.1016/j.trd.2020.102385
+This blog talks about the research “Optimal asset management strategies for mixed transit fleet” published in the Transportation Research Part D: Transport and Environment in this link: [https://doi.org/10.1016/j.trd.2020.102385](https://doi.org/10.1016/j.trd.2020.102385 'Persistent link using digital object identifier')
 
 # 1. Introduction
 
