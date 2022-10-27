@@ -2,8 +2,8 @@
 title: Using New York Taxi Data To Estimate Traffic
 order: 7
 thumbnailURL: /images/research-blogs/tgcn/taxi-2729864_1280.jpg
-thumbnailAlt: Wrong Way Driving
-description: What are the technologies to prevent wrong way driving?
+thumbnailAlt: Taxi TGCN
+description: How 13 Billions Taxi Trips can estimate the entire New York's Road Travel Time?
 ---
 
 # Using New York Taxi Data To Estimate Traffic
@@ -17,7 +17,7 @@ With the advancement of technology penetrating into several aspect of life, the 
  <p align="center">
   <img src="/images/research-blogs/tgcn/OElhy4i.png" width = 1000/>
   <br>
-	Figure 1. Manhattan Road Network, Pickup, and Dropoff Density
+	<b>Figure 1. Manhattan Road Network, Pickup, and Dropoff Density</b>
 </p>
 In dense urban area, dynamic link travel time estimation (DU-LTE) is a problem where the objective is to find travel time of every road segment at every time of the day. DU-LTE is extremely beneficial for city dwellers since they can estimate their travel times, choose their shortest route, or monitoring the current traffic. Figure 2 shows an example of DU-LTE where a tourist may need to know the travel time from Times Square and the JFK International Airport. The path with the shortest distance may not be the ideal path since speed limit, facility type (highway vs normal road), and traffic condition all plays a role. Therefore, the link travel time at each time of the day is needed to have an accuracy estimation of the shortest path and its estimated travel time.
 
@@ -26,7 +26,7 @@ Taxi data provides an insight into this problem since for every taxi trip, we ca
 <p align="center">
   <img src="/images/research-blogs/tgcn/Image 26.png" width = 1000/>
   <br>
-	Figure 3. Three Steps Framework
+	<b>Figure 2. Example of DU-LTE</b>
 </p>
 
 # Methodology
@@ -36,7 +36,7 @@ Taxi data only contains the pickup and dropoff point whereas the full trajectory
 <p align="center">
   <img src="/images/research-blogs/tgcn/Image 29.png" width = 1000/>
   <br>
-	Figure 3. Three Steps Framework
+	<b>Figure 3. Three Steps Framework</b>
 </p>
 The three steps are (1) Path Choice Prediction, (2) Partial Link Travel Time Prediction, and (3) Dynamic Urban Link Travel Speed Estimation. Step 1 takes the raw input which is taxi trip data (pickup and dropoff location, travel time, and distance) and produces an output of predicted path choice for all taxi trips. This output is fed as an input to step 2 which then produces an output of partial link travel time estimation. Step 3 then takes the step 2 output as input and produces the ultimate result which is the dynamic link travel time estimation.
 
@@ -46,7 +46,7 @@ In step 3, we use a model called Traffic Graph Convolution Network (TGCN). In es
   <img src="/images/research-blogs/tgcn/Image 27.png" width = 400
   />
   <br>
-	Figure 4. Representation of TGCN
+	<b>Figure 4. Representation of TGCN</b>
 </p>
 Since this project is still under going, the results are not available at the moment.
 
@@ -57,5 +57,5 @@ The author is responsible for the problem concept, methodology, modeling in soft
  <p align="center">
   <img src="/images/research-blogs/tgcn/Image 28.png" width = 600/>
   <br>
-	Figure 5. Example of data mapping
+	<b>Figure 5. Example of data mapping</b>
 </p>
