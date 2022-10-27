@@ -9,6 +9,7 @@ description: How optimization can help with transit's asset management?
 # Optimal asset management strategies for mixed transit fleet
 
 This blog is based on the research “Optimal asset management strategies for mixed transit fleet” published in the Transportation Research Part A: Policy and Practice in the following link: [https://doi.org/10.1016/j.tra.2018.08.013](https://doi.org/10.1016/j.tra.2018.08.013 'Persistent link using digital object identifier')
+<p><b>Keywords:</b> Integer Linear Programming, Resource Allocation, Mixed Transit Fleet</p>
 
 # 1. Introduction
 
