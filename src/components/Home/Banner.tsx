@@ -44,10 +44,12 @@ export default function Banner() {
               <figure>
                 <div className=" aspect-w-16 aspect-h-9 lg:aspect-1">
                   <Image
-                    className="rounded-lg shadow-lg object-cover object-center"
+                    className="h-full w-full rounded-lg shadow-lg object-cover object-center"
                     src={config.homePage.banner.imageURL}
                     alt={config.homePage.banner.imageAlt}
-                    layout="fill"
+                    width={0}
+                    height={0}
+                    sizes={'100vw'}
                   />
                 </div>
               </figure>

@@ -1,9 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
+import { BlogType } from '../../../types';
 import config from '../../config';
-import { useEffect, useState } from 'react';
-import { BlogType } from '../../types';
-import BlogTypes from '../Home/BlogTypes';
 
 interface Props {
   blogType: BlogType;

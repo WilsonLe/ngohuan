@@ -1,8 +1,8 @@
-import { GetStaticProps, NextComponentType, NextPage } from 'next';
+import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { BlogHeaderData, BlogType } from '../../types';
+import { BlogHeaderData, BlogType } from '../../../types';
 
 interface Props {
   blogType: BlogType;
@@ -31,32 +31,31 @@ const BlogList: NextPage<Props> = ({ blogType, blogHeaders }) => {
               href={`/blogs/${
                 blogType === 'personal' ? 'personal-blogs' : 'research-blogs'
               }/${blogCard.id}`}
+              passHref
             >
-              <a>
-                <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                  <div className="flex-shrink-0">
-                    <div className="h-48 w-full object-cover" ref={cardRef}>
-                      <Image
-                        className="h-48 w-full object-cover"
-                        src={blogCard.thumbnailURL}
-                        height={192}
-                        width={imageWidth}
-                        alt={blogCard.thumbnailAlt}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div className="flex-1">
-                      <p className="text-xl font-medium text-indigo-600">
-                        {blogCard.title}
-                      </p>
-                      <p className="mt-3 text-base text-gray-500">
-                        {blogCard.description}
-                      </p>
-                    </div>
+              <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div className="flex-shrink-0">
+                  <div className="h-48 w-full object-cover" ref={cardRef}>
+                    <Image
+                      className="h-48 w-full object-cover"
+                      src={blogCard.thumbnailURL}
+                      height={192}
+                      width={imageWidth}
+                      alt={blogCard.thumbnailAlt}
+                    />
                   </div>
                 </div>
-              </a>
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                  <div className="flex-1">
+                    <p className="text-xl font-medium text-indigo-600">
+                      {blogCard.title}
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      {blogCard.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </Link>
           ))}
         </div>

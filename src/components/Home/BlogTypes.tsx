@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import config from '../../config';
 import { useEffect, useRef, useState } from 'react';
+import config from '../../config';
 
 const cards = config.homePage.blogs.cards;
 
@@ -30,34 +30,32 @@ export default function BlogTypes() {
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none">
           {cards.map((post) => (
-            <Link key={post.title} href={post.href}>
-              <a>
-                <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                  <div className="flex-shrink-0">
-                    <div className="h-48 w-full object-cover" ref={cardRef}>
-                      <Image
-                        className="h-48 w-full object-cover"
-                        src={post.imageUrl}
-                        height={192}
-                        width={imageWidth}
-                        alt={post.imageAlt}
-                      />
-                    </div>
+            <Link key={post.title} href={post.href} passHref>
+              <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div className="flex-shrink-0">
+                  <div className="h-48 w-full object-cover" ref={cardRef}>
+                    <Image
+                      className="h-48 w-full object-cover"
+                      src={post.imageUrl}
+                      height={192}
+                      width={imageWidth}
+                      alt={post.imageAlt}
+                    />
                   </div>
-                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div className="flex-1">
-                      <a href={post.href} className="block mt-2">
-                        <p className="text-xl font-semibold text-gray-900">
-                          {post.title}
-                        </p>
-                        <p className="mt-3 text-base text-gray-500">
-                          {post.description}
-                        </p>
-                      </a>
+                </div>
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                  <div className="flex-1">
+                    <div className="block mt-2">
+                      <p className="text-xl font-semibold text-gray-900">
+                        {post.title}
+                      </p>
+                      <p className="mt-3 text-base text-gray-500">
+                        {post.description}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </Link>
           ))}
         </div>

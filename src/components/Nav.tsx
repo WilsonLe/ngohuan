@@ -1,9 +1,8 @@
-import { Fragment } from 'react';
-import Image from 'next/image';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import config from '../config';
+import Image from 'next/image';
 import Link from 'next/link';
+import config from '../config';
 
 const buttons = config.navBar.buttons;
 
@@ -26,20 +25,16 @@ export default function Nav() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
-                <Link href="/">
-                  <a>
-                    <div className="flex-shrink-0 flex items-center">
-                      <div className="h-8 w-32">
-                        <Image
-                          className="object-contain"
-                          src={config.navBar.logo.url}
-                          width={128}
-                          height={32}
-                          alt={config.navBar.logo.alt}
-                        />
-                      </div>
-                    </div>
-                  </a>
+                <Link href="/" passHref>
+                  <div className="flex-shrink-0 flex items-center">
+                    <Image
+                      className="object-contain"
+                      src={config.navBar.logo.url}
+                      width={40}
+                      height={40}
+                      alt={config.navBar.logo.alt}
+                    />
+                  </div>
                 </Link>
 
                 <div className="hidden sm:block sm:ml-6">
