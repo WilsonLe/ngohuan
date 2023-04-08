@@ -1,11 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import config from '../../config';
+import { HomeData } from '../../models/home';
 
-const cards = config.homePage.blogs.cards;
-
-export default function BlogTypes() {
+export default function BlogTypes(props: HomeData) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [imageWidth, setImageWidth] = useState<number>(0);
   useEffect(() => {
@@ -22,24 +20,24 @@ export default function BlogTypes() {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            {config.homePage.blogs.title}
+            {props.blogTitle}
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            {config.homePage.blogs.subtitle}
+            {props.blogSubtitle}
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none">
-          {cards.map((post) => (
-            <Link key={post.title} href={post.href} passHref>
+          {props.blogCards.map((post) => (
+            <Link key={post.title} href={post.url} passHref>
               <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div className="flex-shrink-0">
                   <div className="h-48 w-full object-cover" ref={cardRef}>
                     <Image
                       className="h-48 w-full object-cover"
-                      src={post.imageUrl}
+                      src={post.thumbnail.src}
                       height={192}
                       width={imageWidth}
-                      alt={post.imageAlt}
+                      alt={post.thumbnail.alt}
                     />
                   </div>
                 </div>

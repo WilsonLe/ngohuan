@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import config from '../../config';
+import legacyConfig from '../../legacy-config';
+import { HomeData } from '../../models/home';
 
-const pubs = config.homePage.publications.cards;
+const pubs = legacyConfig.homePage.publications.cards;
 
-export default function PubTypes() {
+export default function PubTypes(props: HomeData) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [imageWidth, setImageWidth] = useState<number>(0);
   useEffect(() => {
@@ -22,10 +23,10 @@ export default function PubTypes() {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            {config.homePage.publications.title}
+            {props.publicationTitle}
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            {config.homePage.publications.subtitle}
+            {props.publicationSubtitle}
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">

@@ -1,4 +1,4 @@
-const config = {
+const legacyConfig = {
   // navigation bar
   navBar: {
     // website logo, displayed on the top left
@@ -285,4 +285,4 @@ const config = {
   },
 };
 
-export default config;
+export default legacyConfig;

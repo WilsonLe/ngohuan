@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { BlogType } from '../../../types';
-import config from '../../config';
+import legacyConfig from '../../legacy-config';
 
 interface Props {
   blogType: BlogType;
@@ -13,15 +13,15 @@ const BlogBanner: NextPage<Props> = ({ blogType }) => {
   let bannerImageURL: string;
   let bannerImageAlt: string;
   if (blogType === 'personal') {
-    bannerTitle = config.personalBlogs.banner.title;
-    bannerSubtitle = config.personalBlogs.banner.subtitle;
-    bannerImageURL = config.personalBlogs.banner.imageURL;
-    bannerImageAlt = config.personalBlogs.banner.imageAlt;
+    bannerTitle = legacyConfig.personalBlogs.banner.title;
+    bannerSubtitle = legacyConfig.personalBlogs.banner.subtitle;
+    bannerImageURL = legacyConfig.personalBlogs.banner.imageURL;
+    bannerImageAlt = legacyConfig.personalBlogs.banner.imageAlt;
   } else if (blogType === 'research') {
-    bannerTitle = config.researchBlogs.banner.title;
-    bannerSubtitle = config.researchBlogs.banner.subtitle;
-    bannerImageURL = config.researchBlogs.banner.imageURL;
-    bannerImageAlt = config.personalBlogs.banner.imageAlt;
+    bannerTitle = legacyConfig.researchBlogs.banner.title;
+    bannerSubtitle = legacyConfig.researchBlogs.banner.subtitle;
+    bannerImageURL = legacyConfig.researchBlogs.banner.imageURL;
+    bannerImageAlt = legacyConfig.personalBlogs.banner.imageAlt;
   } else {
     throw 'Invalid blogType';
   }

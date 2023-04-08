@@ -2,11 +2,9 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Link from 'next/link';
-import config from '../config';
+import { HeaderData } from '../models/header';
 
-const buttons = config.navBar.buttons;
-
-export default function Nav() {
+export default function Nav(props: HeaderData) {
   return (
     <Disclosure as="div" className="bg-gray-800">
       {({ open }: { open: boolean }) => (
@@ -29,17 +27,17 @@ export default function Nav() {
                   <div className="flex-shrink-0 flex items-center">
                     <Image
                       className="object-contain"
-                      src={config.navBar.logo.url}
+                      src={props.logo.src}
                       width={40}
                       height={40}
-                      alt={config.navBar.logo.alt}
+                      alt={props.logo.alt}
                     />
                   </div>
                 </Link>
 
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
-                    {buttons.map((item) => (
+                    {props.navigations.map((item) => (
                       <a
                         key={item.text}
                         href={item.href}
@@ -58,7 +56,7 @@ export default function Nav() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {buttons.map((item) => (
+              {props.navigations.map((item) => (
                 <Disclosure.Button
                   key={item.text}
                   as="a"
